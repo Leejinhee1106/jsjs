@@ -79,7 +79,10 @@
                 x:xValues,
                 y:yValues, 
                 mode:mode, 
-            }]
+            }];
+            const layout = {title:"y = " + exp}; // 그래프 제목 설정
+
+            Plotly.newPlot("myPlot", data, layout);
         }
     </script>
 

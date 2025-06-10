@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script>
+    <title>TensorFlow</title>
+</head>
+<body>
+    <h2>머신러닝을 위한 구글에서 만든 자바스크립트 라이브러리</h2>
+    <!-- CDN선언 : <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.5.1/dist/tfjs-vis.umd.min.js"></script> -->
+    
+    <script>
+        const series = ['First','Second'];
+
+        const serie1 = [];
+        const serie2 = [];
+
+        for (let i = 0; i < 100; i++) {
+            serie1[i] = {x:i, y:Math.random() * 100};
+            serie2[i] = {x:i, y:Math.random() * 100};
+        }
+
+        const data = {values:[serie1, serie2], series}
+
+        tfvis.render.scatterplot({name: "it's"},data);
+    </script>
+</body>
+</html>
